@@ -6,7 +6,7 @@ const getAll = catchAsync(async (req, res, next) => {
   const { limit, page } = req.query;
   const phrases = await PhrasesSrv.getAll({ limit, page });
 
-  return response(res, 'successfully created phrase', phrases);
+  return response(res, 'successfully obtained phrases', phrases);
 });
 
 const create = catchAsync(async (req, res, next) => {
